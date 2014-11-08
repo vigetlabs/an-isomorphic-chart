@@ -1,11 +1,15 @@
+// Pull in environment variables
+require('node-env-file')('.env');
+
+// Next teach node how to parse JSX
 require('node-jsx').install({
   harmony: true
 });
 
 var express = require('express');
-var swig    = require('swig');
-var path    = require('path');
-var React  = require('react');
+var swig = require('swig');
+var path = require('path');
+var React = require('react');
 var monsters = require('./data/monsters.json');
 var assetsPath = path.resolve(__dirname, 'assets');
 var viewsPath = path.resolve(__dirname, 'views');
@@ -43,4 +47,6 @@ app.get('/chart.svg', function(req, res) {
   res.end(src);
 });
 
-app.listen(3000);
+app.listen(process.env.PORT, function() {
+  console.log("This example is running on port %s", process.env.PORT);
+});
