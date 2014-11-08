@@ -3,8 +3,12 @@ var path        = require('path');
 var express     = require('express');
 var compression = require('compression');
 
-var assetsPath  = path.resolve(__dirname, '..', 'assets');
-var viewsPath   = path.resolve(__dirname, '..', 'views');
+// Quick references to paths to clean up configuration
+var assetsPath = path.resolve(__dirname, '..', 'assets');
+var viewsPath = path.resolve(__dirname, '..', 'views');
+
+// Alloted time for static caching
+var hourly = 1000 * 60 * 60
 
 module.exports = function(app) {
   // Add gzip compression. In an ideal world, this would be
@@ -14,7 +18,7 @@ module.exports = function(app) {
 
   // Configure where static assets, such as the client-side
   // javascript payload lives.
-  app.use(express.static(assetsPath));
+  app.use(express.static(assetsPath, { maxAge: hourly }));
 
   // Configure views
   //
