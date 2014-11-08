@@ -1,13 +1,29 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <title>Isomorphic Charts</title>
+    <style>
+      body {
+        color: #444;
+        font-family: sans-serif;
+        margin: 0 auto;
+        width: 600px;
+        max-width: 100%;
+        text-align: center;
+      }
+
+      svg {
+        margin: 0 auto;
+      }
+    </style>
   </head>
   <body>
+    <h1>Isomorphic charts are the best</h1>
+
     <div id="chart">
       {% autoescape false %}
-        {{ chart }}
+      {{ chart }}
       {% endautoescape %}
     </div>
     <script src="/bundle.js"></script>
