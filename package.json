@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node server",
+    "watch": "webpack -w -d",
     "postinstall": "./scripts/production.sh"
   },
   "engines": {

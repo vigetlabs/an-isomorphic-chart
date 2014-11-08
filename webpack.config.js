@@ -1,9 +1,6 @@
 var Path = require('path');
 
 module.exports = {
-  debug: true,
-  devtool: 'sourcemap',
-
   entry: {
     bundle: './src/browser.jsx'
   },
