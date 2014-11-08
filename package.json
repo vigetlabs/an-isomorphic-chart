@@ -11,6 +11,10 @@
   "engines": {
     "node": "0.10.x"
   },
+  "repository" : {
+    "type" : "git",
+    "url" : "http://github.com/nhunzaker/an-isomorphic-chart.git"
+  },
   "author": "Nate Hunzaker, Viget Labs",
   "license": "MIT",
   "dependencies": {
