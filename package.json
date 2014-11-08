@@ -1,11 +1,14 @@
 {
   "name": "react-chart",
   "version": "1.0.0",
-  "description": "",
+  "description": "A demonstration of isomorphic data visualization.",
   "main": "index.js",
   "scripts": {
     "start" : "node server",
-    "postinstall": "./lib/production.sh"
+    "postinstall": "./scripts/production.sh"
+  },
+  "engines": {
+    "node": "0.10.x"
   },
   "author": "Nate Hunzaker, Viget Labs",
   "license": "MIT",
