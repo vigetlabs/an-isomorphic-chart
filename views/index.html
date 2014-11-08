@@ -19,13 +19,19 @@
     </style>
   </head>
   <body>
-    <h1>Isomorphic charts are the best</h1>
+    <article>
+      <h1>Why I think isomorphic charts are the best</h1>
 
-    <div id="chart">
-      {% autoescape false %}
-      {{ chart }}
-      {% endautoescape %}
-    </div>
-    <script src="/bundle.js"></script>
+      <div id="chart">
+        {% autoescape false %}
+          {{ chart }}
+        {% endautoescape %}
+      </div>
+      <p>
+        Because they work everywhere!
+      </p>
+    </article>
+
+    <script src="/bundle.js" async></script>
   </body>
 </html>
