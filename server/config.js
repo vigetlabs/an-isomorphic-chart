@@ -7,14 +7,14 @@ var assetsPath  = path.resolve(__dirname, '..', 'assets');
 var viewsPath   = path.resolve(__dirname, '..', 'views');
 
 module.exports = function(app) {
-  // Configure where static assets, such as the client-side
-  // javascript payload lives.
-  app.use(express.static(assetsPath));
-
   // Add gzip compression. In an ideal world, this would be
   // handled by Apache or Nginx, however we don't have that luxury
   // on Heroku.
   app.use(compression());
+
+  // Configure where static assets, such as the client-side
+  // javascript payload lives.
+  app.use(express.static(assetsPath));
 
   // Configure views
   //
