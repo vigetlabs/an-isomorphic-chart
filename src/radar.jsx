@@ -19,14 +19,14 @@ var Radar = React.createClass({
   getCurve(curve, i) {
     return (
       <g opacity="0.6" key={ i }>
-        <path d={ curve.polygon.path.print() } fill={ this.props.fill } stroke="none" />
+        <path d={ curve.polygon.path.print() } fill={ this.props.fill } />
       </g>
     );
   },
 
   getRing(ring, i) {
     return (
-      <path key={ i } d={ ring.path.print() } fill="none" stroke={ this.props.stroke } />
+      <path key={ i } d={ ring.path.print() } stroke={ this.props.stroke } />
     );
   },
 

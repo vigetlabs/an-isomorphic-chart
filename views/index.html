@@ -2,7 +2,12 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
+
     <title>Isomorphic Charts</title>
+
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
     <style>
       body {
         color: #444;
@@ -24,7 +29,7 @@
 
       <div id="chart">
         {% autoescape false %}
-        {{ chart }}
+          {{ chart }}
         {% endautoescape %}
       </div>
       <p>
