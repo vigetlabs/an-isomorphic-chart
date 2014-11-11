@@ -18,7 +18,7 @@ var Chart = React.createClass({
 
     return (
       <svg height={ height } width={ width } version="1.1">
-        <title>Stats</title>
+        <title>Monster States</title>
         <Radar data={ data } x={ width / 2 } y={ height / 2 } r={ r } />
       </svg>
     );

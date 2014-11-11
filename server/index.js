@@ -3,17 +3,17 @@ require('node-env-file')('.env');
 
 // Next teach node how to parse JSX
 require('node-jsx').install({
+  // ES6 goodness
   harmony: true
 });
 
-var React    = require('react');
-var express  = require('express');
+var app      = require('express')();
 var monsters = require('../data/monsters.json');
-var app      = express();
+var React    = require('react');
+var Chart    = require('../src/chart.jsx');
 
 require('./config')(app);
 
-var Chart = require('../src/chart.jsx');
 
 function buildChart() {
   return React.createElement(Chart, { data: monsters });

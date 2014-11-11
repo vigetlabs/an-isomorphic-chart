@@ -1,5 +1,5 @@
 var React = require('react');
-var Paths = require('paths-js/radar');
+var RadarPaths = require('paths-js/radar');
 
 var Radar = React.createClass({
 
@@ -17,32 +17,31 @@ var Radar = React.createClass({
   },
 
   getCurve(curve, i) {
+    var path = curve.polygon.path.print();
+
     return (
-      <g opacity="0.6" key={ i }>
-        <path d={ curve.polygon.path.print() } fill={ this.props.fill } />
-      </g>
+      <path key={ i } d={ path } fill={ this.props.fill } />
     );
   },
 
   getRing(ring, i) {
+    var path = ring.path.print();
+
     return (
-      <path key={ i } d={ ring.path.print() } stroke={ this.props.stroke } />
+      <path key={ i } d={ path } stroke={ this.props.stroke } />
     );
   },
 
-  build() {
-    var { data, max, r, rings, x, y } = this.props;
-
-    return Paths({ data, max, r, rings, center: [ x, y ] });
-  },
-
   render() {
-    var paths = this.build();
+    var { data, max, r, rings, x, y } = this.props;
+    var paths = RadarPaths({ data, max, r, rings, center: [ x, y ] });
 
     return (
       <g fill="none" stroke="none">
         { paths.rings.map(this.getRing) }
-        { paths.curves.map(this.getCurve) }
+        <g opacity="0.6">
+          { paths.curves.map(this.getCurve) }
+        </g>
       </g>
     );
   }
