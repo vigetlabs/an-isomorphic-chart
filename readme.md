@@ -1,7 +1,8 @@
 # An Isomorphic Chart
 
-This is an example repo for an upcoming blog post on Viget.com about
-the merits of isomorphic chart design.
+Data visualization has become a more frequent element of our work at Viget. Be it simple pie charts or beautiful maps displaying jersey sales, visually representing data in a compelling way is a great device for storytelling and provides rich fuel for social sharing.
+
+(Visualization is for sharing, read the post about it here) [http://viget.com/extend/visualization-is-for-sharing-using-react-for-portable-data-visualization]
 
 # Run it locally
 
